@@ -12,7 +12,6 @@ fun CoroutineScope.readTemperatureSensor() = produce<Double>{
 
     while(true) {
         send(tempSensor.getTemperature(TemperatureScale.CELSIUS))
-        println(">>>> Temp");
         Thread.sleep(2000)
     }
 }
